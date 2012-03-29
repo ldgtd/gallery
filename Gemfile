@@ -12,6 +12,7 @@ group :assets do
   gem 'therubyracer'
   gem 'compass-rails',  '~> 1.0.1'
   gem 'bootstrap-sass', '~> 2.0.1'
+  gem 'fancybox-rails'
 end
 
 # Production environment dependencies

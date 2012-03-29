@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require fancybox
 //= require_tree .
+(function($, undefined) {
+  
+  $(function() {
+    $('a.thumbnail').fancybox();
+  });
+
+})(jQuery);
