@@ -18,7 +18,13 @@
 (function($, undefined) {
   
   $(function() {
-    $('a.thumbnail').fancybox();
+    $('.gallery .thumbnail > a').fancybox({
+      transitionIn: 'elastic',
+      transitionOut: 'elastic',
+      cyclic: true,
+      overlayOpacity: '0.2',
+      titlePosition: 'inside'
+    });
   });
 
 })(jQuery);

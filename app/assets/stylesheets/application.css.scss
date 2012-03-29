@@ -1,4 +1,45 @@
 
+
 @import 'bootstrap';
 @import 'fancybox';
 @import 'galleries';
+
+@import "compass/css3";
+
+body {
+   background: #C4C4C4; 
+}
+
+.navbar {
+  .brand {
+    color: blue;
+    @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
+  }
+}
+
+.gallery {
+  background: #FFFFFF;
+  @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
+  @include border-radius(4px, 4px);
+
+  .thumbnails {
+    margin-left: 0px;
+
+    .thumbnail {
+      height: 133px;
+      width: 202px;
+      margin-left: 16px;
+      margin-bottom: 14px;
+      overflow: hidden;
+
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+.about_me {
+  text-align: justify;
+}
+

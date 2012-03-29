@@ -1,36 +1,13 @@
-<div class="gallery">
+<div class="gallery span9">
 	<h1>My first gallery</h1>
 	<p>Find me in app/views/galleries/index.html.erb</p>
-	<ul class="thumbnails">
-	  <li class="span3">
-	    <a href="http://placehold.it/520x360" class="thumbnail">
-	      <img src="http://placehold.it/260x180" alt="">
-	    </a>
-	  </li>
-	   <li class="span3">
-	    <a href="http://placehold.it/520x360" class="thumbnail">
-	      <img src="http://placehold.it/260x180" alt="">
-	    </a>
-	  </li>
-	   <li class="span3">
-	    <a href="http://placehold.it/520x360" class="thumbnail">
-	      <img src="http://placehold.it/260x180" alt="">
-	    </a>
-	  </li>
-	   <li class="span3">
-	    <a href="http://placehold.it/520x360" class="thumbnail">
-	      <img src="http://placehold.it/260x180" alt="">
-	    </a>
-	  </li>
-	   <li class="span3">
-	    <a href="http://placehold.it/520x360" class="thumbnail">
-	      <img src="http://placehold.it/260x180" alt="">
-	    </a>
-	  </li>
-	   <li class="span3">
-	    <a href="http://placehold.it/520x360" class="thumbnail">
-	      <img src="http://placehold.it/260x180" alt="">
-	    </a>
-	  </li>
+	<ul class="thumbnails row">
+	  <% 1.upto(6) do |index| %>
+		  <li class="thumbnail span3">
+		    <a href="<%= image_path("#{index}_b.jpg") %>" rel="gallery_1" title="My Image">
+		    	<%= image_tag "#{index}_b.jpg" %>
+		    </a>
+		  </li>
+	  <% end %>
 	</ul>
 </div>
