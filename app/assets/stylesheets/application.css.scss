@@ -6,18 +6,35 @@
 
 @import "compass/css3";
 
+$blue: #08C;
+
 body {
    background: #C4C4C4; 
 }
 
+.title_gallery {
+  margin-left: 16px;
+}
+
+h1 {
+  color: $blue;
+}
+ .about_me {
+  text-align: justify;
+
+   h2{
+     color: $blue;
+   }
+ }
+
 .navbar {
   .brand {
-    color: blue;
-    @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
+    color: white;
   }
 }
 
 .gallery {
+  margin-top: 15px;
   background: #FFFFFF;
   @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
   @include border-radius(4px, 4px);
@@ -37,9 +54,5 @@ body {
       }
     }
   }
-}
-
-.about_me {
-  text-align: justify;
 }
 
