@@ -1,7 +1,6 @@
 @import 'bootstrap';
 @import 'fancybox';
 @import 'galleries';
-
 @import "compass/css3";
 
 $blue: #08C;
@@ -17,8 +16,14 @@ body {
 h1 {
   color: $blue;
 }
+  
  .about_me {
+  height: 100px;
+  width: 220px;
+  position: fixed;
+  top: 8%;
   text-align: justify;
+
 
    h2{
      color: $blue;
