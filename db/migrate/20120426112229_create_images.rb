@@ -4,6 +4,7 @@ class CreateImages < ActiveRecord::Migration
       t.text :description
       t.string :title
       t.datetime :shooted_at
+      t.integer :image_storeid
 
       t.timestamps
     end
