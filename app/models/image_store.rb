@@ -1,5 +1,5 @@
 class ImageStore < ActiveRecord::Base
-	has_many :image
+	has_many :images
 
-	validates_presence_of :name
+	validates_presence_of :named
 end
