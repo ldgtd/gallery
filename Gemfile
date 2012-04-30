@@ -14,6 +14,7 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.0.1'
   gem 'fancybox-rails'
   gem 'rails-i18n'
+  gem 'carrierwave'
 end
 
 # Production environment dependencies
