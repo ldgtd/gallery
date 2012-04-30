@@ -1,45 +1,8 @@
-<div class="gallery span9">	  	
-  <div class="title_gallery">	  	
-    <h1>My first gallery</h1>	  	
-    <p>About this gallery</p>	  	
-  </div>	  	
-  <ul class="thumbnails row">	  	
-    <% 1.upto(6) do |index| %>	  	
-      <li class="thumbnail span3">	  	
-        <a href="<%= image_path("#{index}_b.jpg") %>" rel="gallery_1" title="My Image">	  	
-          <%= image_tag "#{index}_b.jpg" %>	  	
-        </a>	  	
-      </li>	  	
-   <% end %>	  	
-  </ul>
-</div>
-<div class="gallery span9">	  	
-  <div class="title_gallery">	  	
-    <h1>My second gallery</h1>	  	
-    <p>About this gallery</p>	  	
-  </div>	  	
-  <ul class="thumbnails row">	  	
-    <% 1.upto(6) do |index| %>	  	
-      <li class="thumbnail span3">	  	
-        <a href="<%= image_path("#{index}_b.jpg") %>" rel="gallery_1" title="My Image">	  	
-          <%= image_tag "#{index}_b.jpg" %>	  	
-        </a>	  	
-      </li>	  	
-   <% end %>	  	
-  </ul>
-</div>
-<div class="gallery span9">	  	
-  <div class="title_gallery">	  	
-    <h1>My third gallery</h1>	  	
-    <p>About this gallery</p>	  	
-  </div>	  	
-  <ul class="thumbnails row">	  	
-    <% 1.upto(6) do |index| %>	  	
-      <li class="thumbnail span3">	  	
-        <a href="<%= image_path("#{index}_b.jpg") %>" rel="gallery_1" title="My Image">	  	
-          <%= image_tag "#{index}_b.jpg" %>	  	
-        </a>	  	
-      </li>	  	
-   <% end %>	  	
-  </ul>
+<div class="span9">
+  <% @image_stores.each do |store| %>
+    <%= div_for(store, :class => "gallery") do %>
+      <h1><%= store.name %></h1><br />
+      <%= store.description %>
+    <% end %>
+  <% end %>
 </div>
