@@ -1,8 +1,15 @@
 <div class="span9">
   <% @image_stores.each do |store| %>
     <%= div_for(store, :class => "gallery") do %>
-      <h1><%= store.name %></h1><br />
-      <%= store.description %>
+      <table border="1">
+        <tr>
+          <td id="store_name"><h1><%= store.name %></h1></td>
+          <td><p id="datetime"><%= time_tag store.created_at %></p></td>
+        </tr>
+        <tr>
+          <td><%= store.description %></td>
+        </tr>
+      </table>
     <% end %>
   <% end %>
 </div>

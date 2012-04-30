@@ -13,6 +13,7 @@ group :assets do
   gem 'compass-rails',  '~> 1.0.1'
   gem 'bootstrap-sass', '~> 2.0.1'
   gem 'fancybox-rails'
+  gem 'rails-i18n'
 end
 
 # Production environment dependencies

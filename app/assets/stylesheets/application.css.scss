@@ -35,12 +35,21 @@ h1 {
   }
 }
 
-.gallery {
+.gallery { 
   margin-top: 15px;
   padding: 15px;
   background: #FFFFFF;
   @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
   @include border-radius(4px, 4px);
+
+  #store_name {
+    width: 550px; 
+  }
+
+  #datetime {
+    width: 150px; 
+    text-align: right;
+  }
 
   .thumbnails {
     margin-left: 0px;
