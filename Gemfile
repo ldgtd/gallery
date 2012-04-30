@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 gem 'migrant'
 
+
 # Assets dependencies
 group :assets do
   gem 'jquery-rails'
@@ -14,7 +15,7 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.0.1'
   gem 'fancybox-rails'
   gem 'rails-i18n'
-  gem 'carrierwave'
+  gem 'carrierwave',     '>= 0.6.2'
 end
 
 # Production environment dependencies

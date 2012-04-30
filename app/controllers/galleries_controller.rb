@@ -11,12 +11,12 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @image_store = ImageStore.find(params[:id])
+    @image_stores = ImageStore.find(params[:id])
     # @image_store = [ImageStore.all]
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @image_store }
+      format.json { render json: @image_stores }
     end
   end
 

@@ -1,9 +1,12 @@
-<h1>ImageStore</h1>
-  <span class="priority">
-    <%= @image_store.name %>
-  </span>
-  <p class="description">
-    <%= @image_store.description  %>
-  </p>
-
-<br />
+<div class="span9">
+<div class="gallery">
+  <table border="1">
+    <tr>
+      <td id="store_name"><h1><%= @image_stores.name %></h1></td>
+      <td><p id="datetime"><%= time_tag @image_stores.created_at %></p></td>
+    </tr>
+    <tr>
+      <td><%= @image_stores.description %></td>
+    </tr>
+  </table>
+</div>
