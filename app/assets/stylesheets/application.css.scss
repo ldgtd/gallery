@@ -3,6 +3,11 @@
 @import 'galleries';
 @import "compass/css3";
 
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                       DEFAULT                         *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 $blue: #08C;
 
 body {
@@ -12,6 +17,12 @@ body {
 .title_gallery {
   margin-left: 16px;
 }
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                        NAVBAR                         *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 h1 {
   color: $blue;
@@ -35,6 +46,12 @@ h1 {
   }
 }
 
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                    GALLERIE DIV                       *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 .gallery { 
   margin-top: 15px;
   padding: 15px;
@@ -46,9 +63,17 @@ h1 {
     width: 550px; 
   }
 
+  .title_link {
+    text-decoration: none; 
+  }
+
   #datetime {
     width: 150px; 
     text-align: right;
+  }
+
+  #empty_col {
+    width: 650px; 
   }
 
   .thumbnails {
@@ -68,6 +93,12 @@ h1 {
   }
 }
 
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                       FOOTER                          *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 .footer {
   height: 80px;
   background-color:#D8D8D8;
@@ -75,5 +106,4 @@ h1 {
   border-bottom: 1px solid #B2B2B2;
   margin: 50px 0 50px 0;
 }
-
 

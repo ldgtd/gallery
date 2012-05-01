@@ -12,7 +12,6 @@ class GalleriesController < ApplicationController
 
   def show
     @image_stores = ImageStore.find(params[:id])
-    # @image_store = [ImageStore.all]
 
     respond_to do |format|
       format.html # show.html.erb

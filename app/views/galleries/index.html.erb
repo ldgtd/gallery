@@ -1,15 +1,22 @@
 <div class="span9">
   <% @image_stores.each do |store| %>
     <%= div_for(store, :class => "gallery") do %>
-      <table border="1">
+      <table border="0">
         <tr>
-          <td id="store_name"><h1><%= store.name %></h1></td>
+          <td id="store_name"><h1><%= link_to store.name, :controller => "galleries", :action => "show", :id => store.id, :class => 'title_link' %></h1></td>
           <td><p id="datetime"><%= time_tag store.created_at %></p></td>
         </tr>
         <tr>
           <td><%= store.description %></td>
         </tr>
       </table>
+      <table border="0">
+        <tr>
+          <td id="empty_col"></td>
+          <td><div><%= link_to 'more..', :controller => "galleries", :action => "show", :id => store.id %></div></td>
+        </tr>
+      </table>
+      
     <% end %>
   <% end %>
 </div>
