@@ -3,11 +3,17 @@
     <table border="0">
       <tr>
         <td id="store_name"><h1><%= @image_stores.name %></h1></td>
-        <td><p id="datetime"><%= time_tag @image_stores.created_at %></p></td>
+        <td><p id="datetime"><%= time_tag @image_stores.created_at, :format => '%d.%m.%y'  %></p></td>
       </tr>
       <tr>
         <td><%= @image_stores.description %></td>
       </tr>
     </table>
+    <table border="0">
+        <tr>
+          <td id="empty_col"></td>
+          <td><div><%= link_to 'back', :controller => "galleries", :action => "index"%></div></td>
+        </tr>
+      </table>
   </div>
 </div>
