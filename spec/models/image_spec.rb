@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe Image do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_db_column(:title) }
+  it { should validate_presence_of(:title) }
+end
+
+describe Image do
+  it { should have_db_column(:title) }
+  it { should validate_presence_of(:title) }
 end

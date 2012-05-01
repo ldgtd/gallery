@@ -2,9 +2,6 @@
 
 FactoryGirl.define do
   factory :image do
-    description "MyString"
-    title "MyString"
-    shoot_at "2012-04-26 13:22:29"
-    date "2012-04-26 13:22:29"
+    title "A title"
   end
 end

@@ -1,4 +1,4 @@
-notification :gntp, sticky: false
+# notification :gntp, sticky: false
 
 guard 'bundler' do
   watch('Gemfile')

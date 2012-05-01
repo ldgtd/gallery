@@ -11,7 +11,8 @@ describe GalleriesController do
 
   describe "GET 'show'" do
     it "returns http success" do
-      get 'show'
+      image_store = Factory.create(:image_store)
+      get 'show', id: image_store.id
       response.should be_success
     end
   end

@@ -2,7 +2,6 @@
 
 FactoryGirl.define do
   factory :image_store do
-    name "MyText"
-    description "MyString"
+    name 'A Name'
   end
 end
