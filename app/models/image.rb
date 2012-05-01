@@ -4,6 +4,7 @@ class Image < ActiveRecord::Base
 	belongs_to :image_store
 	
 	validates_presence_of :title
+	validates_presence_of :image_string
 
 	mount_uploader :image_string, ImagesUploader
 
