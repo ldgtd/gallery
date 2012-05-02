@@ -7,7 +7,6 @@ class GalleriesController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @image_store }
     end 
-
   end
 
   def show

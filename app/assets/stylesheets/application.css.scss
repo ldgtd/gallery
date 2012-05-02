@@ -23,11 +23,21 @@ body {
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                        NAVBAR                         *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 .top_line {
   height: 6px;
   background-color: $blue;  
 }
 
+.navbar {
+  .brand {
+    color: white;
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                      ABOUT ME                         *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 h1 {
   color: $blue;
@@ -36,21 +46,16 @@ h1 {
  .about_me {
   width: 220px;
   position: fixed;
-  top: 8%;
+  top: 9%;
   text-align: justify;
-
+  padding-bottom: 7px;
+  border-top: 1px solid #B2B2B2;
+  border-bottom: 1px solid #B2B2B2;
 
    h2{
      color: $blue;
    }
  }
-
-.navbar {
-  .brand {
-    color: white;
-  }
-}
-
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *

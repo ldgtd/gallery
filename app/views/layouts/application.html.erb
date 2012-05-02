@@ -23,13 +23,9 @@
 					    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> All galleries <b class="caret"></b></a>
 					    <ul class="dropdown-menu">
 					      <li>
-					      	<a href="#">My first gallery</a>
-					      </li>
-					      <li>
-					      	<a href="#">My second gallery</a>
-					      </li>
-					      <li>
-					      	<a href="#">My third gallery</a>
+									<% @image_stores.each do |names| %>
+  									<%= link_to names.name, :controller => "galleries", :action => "show", :id => names.id %>
+									<% end %>
 					      </li>
 					    </ul>
 					  </li>
@@ -52,7 +48,7 @@
 		</div>
 	</div>
 	<div class="footer">
-		<div id="content_footer">© 2012 <a href="http://www.liquid-concept.ch">Liquid Concept</a> - Ludovic Turmel - All rights reserved</div>
+		<div id="content_footer">© 2012<a href="http://www.liquid-concept.ch"> Liquid Concept</a> - Ludovic Turmel - All rights reserved</div>
 	</div>
 </body>
 </html>
