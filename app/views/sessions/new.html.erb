@@ -1,0 +1,28 @@
+<div class="login">
+	<div class="content">
+	<%= form_tag do %>
+			<table border="0" class="table">
+				<tr>
+					<% if flash[:alert] %>
+						<p class="field_with_errors"><%= flash[:alert] %></p>
+					<% end %>
+				</tr>
+				<tr>
+					<td><label for="name">Name:</label></td>
+					<td><%= text_field_tag :name, params[:name] %></td>
+				</tr>
+				<tr>
+					<td><label for="password">Password:</label></td>
+					<td><%= password_field_tag :password, params[:password] %></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div>
+							<%= submit_tag "Login", :class => 'btn btn-info' %>
+						</div>
+					</td>
+				</tr>
+			</table>
+	<% end %>
+	</div>
+</div>

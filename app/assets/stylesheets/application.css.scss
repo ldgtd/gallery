@@ -57,6 +57,30 @@ h1 {
    }
  }
 
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                         LOGIN                          *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ .login {
+    margin: 0 auto;
+    width: 380px;
+    background-color: #FFFFFF;
+    @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
+    @include border-radius(4px, 4px);
+
+    .content {
+      margin: 0 auto;
+      padding: 30px; 
+
+      .table {
+        width: 300px;
+      }
+    }
+ }
+
+.field_with_errors {
+color: $blue;
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                    GALLERIE DIV                       *
@@ -113,10 +137,12 @@ h1 {
 
 .footer {
   height: 80px;
+  width: 100%;
   background-color:#D8D8D8;
   border-top: 1px solid #B2B2B2;
   border-bottom: 1px solid #B2B2B2;
-  margin: 50px 0 50px 0;
+  position: fixed;
+  bottom: 7%;
 }
 
 #content_footer {
@@ -126,6 +152,5 @@ h1 {
   margin-top: 30px;
   color: #989898; 
   text-decoration: none;
-  
 }
 

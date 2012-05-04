@@ -2,11 +2,11 @@
   <div class="gallery">
     <table border="0">
       <tr>
-        <td id="store_name"><h1><%= @image_stores.name %></h1></td>
-        <td><p id="datetime"><%= time_tag @image_stores.created_at, :format => '%d.%m.%y'  %></p></td>
+        <td id="store_name"><h1><%= @image_store.name %></h1></td>
+        <td><p id="datetime"><%= time_tag @image_store.created_at, :format => '%d.%m.%y'  %></p></td>
       </tr>
       <tr>
-        <td><%= @image_stores.description %></td>
+        <td><%= @image_store.description %></td>
       </tr>
     </table>
     <table border="0">
