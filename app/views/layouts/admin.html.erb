@@ -39,7 +39,6 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<%= yield %>
 			<div class="span3">
 				<div class="content_admin">
 					<h1>Admin Area</h1>
@@ -48,7 +47,7 @@
 							<div class="line_menu"></div>
 							<li class="nav-header">menu administration</li>
 							<li>
-					    	<a href="#">
+					    	<a href="/admin/new">
 							    <i class="icon-upload"></i>
 							    New gallery
 							  </a>
@@ -74,6 +73,7 @@
 					</div>
 				</div>
 			</div>
+			<%= yield %>
 		</div>
 	</div>
 	<div class="footer">

@@ -1,0 +1,8 @@
+<div class="span9">
+	<h2>Galleries list</h2>
+	<% ImageStore.all.each do |image_store| %>
+		<ul>
+			<h3>*<%= image_store.name %></h3>
+		</ul>
+	<% end %>
+</div>

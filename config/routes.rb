@@ -1,13 +1,23 @@
 Gallery::Application.routes.draw do
   
   controller :sessions do 
-    get 'login' => :new
-    post 'login' => :create
-    get 'logout' => :destroy
+    get  'login'  => :new
+    post 'login'  => :create
+    get  'logout' => :destroy
   end
 
+  # admin access to galeries
+  controller :admin do
+  	get  'admin'     => :index
+  	get  'admin/new' => :new
+  	post 'admin'     => :create
+  end
  
-  get 'admin' => 'admin#show'
+  # public access to galleries
+  # controller :galleries do
+  # 	get 'galleries'     => :index
+  # 	get 'galleries/:id' => :show
+  # end
 
   resources :galleries
 
