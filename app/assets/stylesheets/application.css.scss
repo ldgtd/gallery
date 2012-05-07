@@ -64,6 +64,7 @@ h1 {
  .login {
     margin: 0 auto;
     width: 380px;
+    height: 220px;
     background-color: #FFFFFF;
     @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
     @include border-radius(4px, 4px);
@@ -80,6 +81,34 @@ h1 {
 
 .field_with_errors {
 color: $blue;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                    ADMIN AREA                         *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.content_admin {
+  h1 {
+    margin-left: 3px;
+  }
+}
+
+.list_menu {
+  width: 200px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 2px 3px);
+  @include border-radius(2px, 2px);
+
+  hr {
+   margin-bottom: 10px; 
+  }
+} 
+
+.line_menu {
+  background-color: $blue;
+  height: 3px;
+  margin: 10px 0px 10px 0px;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -151,6 +180,10 @@ color: $blue;
   margin: 0 auto;
   margin-top: 30px;
   color: #989898; 
-  text-decoration: none;
+
+  a {
+    color: #989898;
+    text-decoration: none;
+  }
 }
 
