@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   def create
   	if params[:name] == 'admin' && params[:password] == 'admin'
   		session[:logged] = true
-  		redirect_to admin_url
+  		redirect_to admins_url
   	else
   		session[:logged] = false
   		redirect_to login_url, :alert => "Invalid user/password combination"

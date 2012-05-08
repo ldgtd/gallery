@@ -9,8 +9,14 @@
         <tr>
           <td><%= store.description %></td>
         </tr>
-          <%= link_to "Edit", :controller => "admin", :action => "edit", :id => store.id  %> |
-   				<%= link_to "Delete", :controller => "admin", :action => "destroy" %>
+      </table>
+      <table border="0">
+      	<tr>
+      		<td>
+      			<%= link_to 'Edit', {:controller => "admin", :action => "edit", :id => store.id}, :class => 'btn btn-info' %>
+   					<%= link_to 'Delete', {:controller => "admin", :action => "destroy", :id => store.id}, :class => 'btn btn-danger' %>
+   				</td>
+      	</tr>
       </table>
     <% end %>
   <% end %>
