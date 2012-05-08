@@ -1,8 +1,17 @@
 <div class="span9">
-	<h2>Galleries list</h2>
-	<% ImageStore.all.each do |image_store| %>
-		<ul>
-			<h3>*<%= image_store.name %></h3>
-		</ul>
-	<% end %>
+  <% @image_stores.each do |store| %>
+    <%= div_for(store, :class => "gallery") do %>
+      <table border="0">
+        <tr>
+          <td id="store_name"><h1><%= store.name  %></h1></td>
+          <td><p id="datetime"><%= time_tag store.created_at, :format => '%d.%m.%y' %></p></td>
+        </tr>
+        <tr>
+          <td><%= store.description %></td>
+        </tr>
+          <%= link_to "Edit", :controller => "admin", :action => "edit", :id => store.id  %> |
+   				<%= link_to "Delete", :controller => "admin", :action => "destroy" %>
+      </table>
+    <% end %>
+  <% end %>
 </div>

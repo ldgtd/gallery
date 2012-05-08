@@ -7,7 +7,6 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @image_stores }
     end
   end
 
@@ -16,7 +15,6 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @image_store }
     end
   end
 
@@ -32,40 +30,34 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       if @image_store.save
-        format.html { redirect_to admin_url, notice: 'ImageStore was successfully created.' }
+        format.html { redirect_to admins_url }
         
       else
         format.html { render action: "new" }
-        format.json { render json: @image_store.errors, status: :unprocessable_entity }
       end
     end
   end
-
-  # PUT 
+ 
   # PUT 
   def update
     @image_store = ImageStore.find(params[:id])
 
     respond_to do |format|
-      if @image_store.update_attributes(params[:gallerie])
-        format.html { redirect_to @image_store, notice: 'Project was successfully updated.' }
-        format.json { head :no_content }
+      if @image_store.update_attributes(params[:image_store])
+        format.html { redirect_to admins_url }
       else
         format.html { render action: "edit" }
-        format.json { render json: @image_store.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE 
-  # DELETE 
   def destroy
-    @gallery = ImageStore.find(params[:id])
-    @gallery.destroy
+    @image_store = ImageStore.find(params[:id])
+    @image_store.destroy
 
     respond_to do |format|
-      format.html { redirect_to galleries_url }
-      format.json { head :no_content }
+      format.html { redirect_to admins_url }
     end
   end
 end

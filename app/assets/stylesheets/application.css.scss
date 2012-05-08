@@ -43,7 +43,7 @@ h1 {
   color: $blue;
 }
   
- .about_me {
+.about_me {
   width: 220px;
   position: fixed;
   top: 9%;
@@ -61,35 +61,36 @@ h1 {
  *                         LOGIN                          *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
- .login {
+.login {
+  margin: 0 auto;
+  width: 380px;
+  height: 220px;
+  background-color: #FFFFFF;
+  @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
+  @include border-radius(4px, 4px);
+
+  .content {
     margin: 0 auto;
-    width: 380px;
-    height: 220px;
-    background-color: #FFFFFF;
-    @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
-    @include border-radius(4px, 4px);
+    padding: 30px; 
 
-    .content {
-      margin: 0 auto;
-      padding: 30px; 
-
-      .table {
-        width: 300px;
-      }
+    .table {
+      width: 300px;
     }
- }
+  }
+}
 
 .field_with_errors {
-color: $blue;
+  color: $blue;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                    ADMIN AREA                         *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-.content_admin {
+.content_menu_admin {
   h1 {
     margin-left: 3px;
+    margin-top: 10px;
   }
 }
 
@@ -100,6 +101,11 @@ color: $blue;
   @include box-shadow(rgba(0, 0, 0, 0.2) 0px 2px 3px);
   @include border-radius(2px, 2px);
 
+  .nav-list li a {
+    padding: 0px;
+    margin: 0px 0px 5px 2px;
+  }
+
   hr {
    margin-bottom: 10px; 
   }
@@ -109,6 +115,20 @@ color: $blue;
   background-color: $blue;
   height: 3px;
   margin: 10px 0px 10px 0px;
+}
+
+.content_admin {
+  background-color: #FFFFFF;
+  margin-top: 36px;
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 2px 3px);
+  @include border-radius(2px, 2px);
+  
+  .content {
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -171,7 +191,7 @@ color: $blue;
   border-top: 1px solid #B2B2B2;
   border-bottom: 1px solid #B2B2B2;
   position: fixed;
-  bottom: 7%;
+  bottom: 0%;
 }
 
 #content_footer {

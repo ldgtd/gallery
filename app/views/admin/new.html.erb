@@ -1,15 +1,2 @@
-<%= form_for @image_store, :url => admin_path do |f| %>
-
-  <div>
-  	<%= f.label :name %><br />
-  	<%= f.text_field :name %>
-  </div>
-  <div>
-  	<%= f.label :description %><br />
-  	<%= f.text_field :description %>
-  </div>
-   <div class="actions">
-    <%= f.submit %>
-  </div>
-
-<% end %>
+<h1>New gallery</h1>
+<%= render 'form' %>
