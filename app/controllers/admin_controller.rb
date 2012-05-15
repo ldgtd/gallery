@@ -15,6 +15,7 @@ class AdminController < ApplicationController
   def new
     @image_store = ImageStore.new
 
+
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -26,15 +27,18 @@ class AdminController < ApplicationController
   end
 
   # POST 
-  # POST 
   def create
-    @image_store = ImageStore.new(params[:image_store])
+    # image_params = params[:image_store].strip
+    @image_store = ImageStore.new(:name => params[:image_store][:name], :description => params[:image_store][:description])
 
     respond_to do |format|
       if @image_store.save
-        format.html { redirect_to admins_url }
-        
-      else
+        @image = Image.new(:image => params[:image_store][:image], :image_store_id => @image_store.id)
+        if @image.save
+          format.html { redirect_to admins_url }
+        else
+          format.html { render action: "new" }
+        end
         format.html { render action: "new" }
       end
     end

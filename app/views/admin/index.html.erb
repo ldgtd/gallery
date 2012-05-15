@@ -1,13 +1,24 @@
 <div class="span9 gallery_admin">
   <% @image_stores.each do |store| %>
     <%= div_for(store, :class => "gallery") do %>
-      <table border="0">
+      <table border="1">
         <tr>
           <td id="store_name"><h1><%= store.name  %></h1></td>
           <td><p id="datetime"><%= time_tag store.created_at, :format => '%d.%m.%y' %></p></td>
         </tr>
         <tr>
           <td><%= store.description %></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+          <ul class="thumbnails row">     
+            <% 1.upto(3) do |index| %>      
+              <li class="thumbnail span3">
+                   
+              </li>     
+            <% end %>      
+          </ul>
+          </td>
         </tr>
       </table>
       <table border="0">

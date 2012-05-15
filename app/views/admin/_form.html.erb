@@ -1,6 +1,6 @@
 <div class="span9 content_admin">
   <div class="content">
-  <%= form_for @image_store, :url => (@image_store.new_record? ? admins_path : admin_path(@image_store.id)) do |f| %>
+  <%= form_for @image_store, :url => (@image_store.new_record? ? admins_path : admin_path(@image_store.id)), :html => {:multipart => true} do |f| %>
     <div>
     	<%= f.label :name %><br />
     	<%= f.text_field :name %>
@@ -10,8 +10,8 @@
     	<%= f.text_field :description %>
     </div>
     <div>
-      <%= f.label :image_string %><br /> 
-      <%= f.file_field :image_string %>  
+      <%= f.label :image  %><br /> 
+      <%= f.file_field :image %>  
     </div>
     <div class="actions">
       <%= f.submit %>
