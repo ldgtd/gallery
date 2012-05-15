@@ -9,9 +9,14 @@
     	<%= f.label :description %><br />
     	<%= f.text_field :description %>
     </div>
-     <div class="actions">
+    <div>
+      <%= f.label :image_string %><br /> 
+      <%= f.file_field :image_string %>  
+    </div>
+    <div class="actions">
       <%= f.submit %>
     </div>
   <% end %>
   <div>
 </div>
+

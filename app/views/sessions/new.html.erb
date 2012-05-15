@@ -1,19 +1,23 @@
 <div class="login">
 	<div class="content">
 	<%= form_tag do %>
-			<table border="0" class="table">
+			<table border="0">
+				<tr>
+					<h2>Login</h2>
+				</tr>
 				<tr>
 					<% if flash[:alert] %>
-						<p class="field_with_errors"><%= flash[:alert] %></p>
+						<div id="alerte" class="alert alert-error">
+							<a class="close" data-dismiss="alert" href="#">×</a>
+							<p class="field_with_errors"><%= flash[:alert] %></p>
+						</div>
 					<% end %>
 				</tr>
 				<tr>
-					<td><label for="name">Name:</label></td>
-					<td><%= text_field_tag :name, params[:name] %></td>
+					<td><%= text_field_tag :name, params[:name], :placeholder => 'login'%></td>
 				</tr>
 				<tr>
-					<td><label for="password">Password:</label></td>
-					<td><%= password_field_tag :password, params[:password] %></td>
+					<td><%= password_field_tag :password, params[:password], :placeholder => 'password' %></td>
 				</tr>
 				<tr>
 					<td colspan="2">

@@ -6,14 +6,8 @@ class Image < ActiveRecord::Base
 	validates_presence_of :title
 	validates_presence_of :image_string
 
+	#rends accesible les champs passer dans ma BD, par defaut tout es inaccesible !
+	attr_accessible :title, :image_string
+
 	mount_uploader :image_string, ImagesUploader
-
-	# u = Image.new
-	# u.image_string = params[:file]
-	# u.image_string = File.open('somewhere')
-	# u.save!
-	# u.image_string.url # => '/url/to/file.png'
-	# u.image_string.current_path # => 'path/to/file.png'
-	# u.image_string.identifier # => 'file.png'
-
 end

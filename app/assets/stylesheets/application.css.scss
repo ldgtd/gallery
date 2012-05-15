@@ -62,8 +62,8 @@ h1 {
 
 .login {
   margin: 0 auto;
-  width: 380px;
-  height: 220px;
+  width: 320px;
+  height: 280px;
   background-color: #FFFFFF;
   @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
   @include border-radius(4px, 4px);
@@ -78,8 +78,13 @@ h1 {
   }
 }
 
+#alerte {
+  height: 10px;
+  background-color: #C43C35;
+}
 .field_with_errors {
-  color: $blue;
+  padding-bottom: 8px;
+  color: #FFFFFFx;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -120,7 +125,7 @@ h1 {
 
 .content_admin {
   background-color: #FFFFFF;
-  margin-top: 36px;
+  margin: 0px 0px 0px 250px;
   @include box-shadow(rgba(0, 0, 0, 0.2) 0px 2px 3px);
   @include border-radius(2px, 2px);
   
@@ -131,13 +136,26 @@ h1 {
   }
 }
 
-.span9 {
-  margin-top: 30px;
+.gallery_admin {
+  margin-top: 27px;
+  margin-bottom: 40px;
+}
+
+#title_admin {
+  width: 400px;
+  margin: 10px 60px 0px 40px;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                    GALLERIE DIV                       *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.gallery_div {
+  margin-bottom: 40px;
+}
+.gallery_show {
+  margin-bottom: 500px;
+}
 
 .gallery { 
   margin-top: 15px;
@@ -194,8 +212,8 @@ h1 {
   background-color:#D8D8D8;
   border-top: 1px solid #B2B2B2;
   border-bottom: 1px solid #B2B2B2;
-  position: fixed;
-  bottom: 0%;
+  margin-bottom: 50px;
+  
 }
 
 #content_footer {

@@ -4,11 +4,13 @@ class AdminController < ApplicationController
 
 	def index
     @image_stores = ImageStore.all
+    @images = Image.all
 
     respond_to do |format|
       format.html # index.html.erb
     end
   end
+
 
   def new
     @image_store = ImageStore.new

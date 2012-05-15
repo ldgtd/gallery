@@ -4,6 +4,6 @@ class ImageStore < ActiveRecord::Base
 
 	validates_presence_of :name
 
-	#rends accesible les champs passer dans mas BD, par defaut tout es inaccesible !
+	#rends accesible les champs passer dans ma BD, par defaut tout es inaccesible !
 	attr_accessible :name, :description
 end

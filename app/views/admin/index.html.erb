@@ -1,4 +1,4 @@
-<div class="span9">
+<div class="span9 gallery_admin">
   <% @image_stores.each do |store| %>
     <%= div_for(store, :class => "gallery") do %>
       <table border="0">
@@ -11,12 +11,12 @@
         </tr>
       </table>
       <table border="0">
-      	<tr>
-      		<td>
-      			<%= link_to 'Edit', {:controller => "admin", :action => "edit", :id => store.id}, :class => 'btn btn-info' %>
-   					<%= link_to 'Delete', {:controller => "admin", :action => "destroy", :id => store.id}, :class => 'btn btn-danger' %>
-   				</td>
-      	</tr>
+        <tr>
+          <td>
+            <%= link_to 'Edit', {:controller => "admin", :action => "edit", :id => store.id}, :class => 'btn btn-info' %>
+             <%= link_to 'Destroy', {:controller => "admin", :method => :delete, :action => 'destroy', :id => store}, :class => 'btn btn-danger' %>
+          </td>
+        </tr>
       </table>
     <% end %>
   <% end %>
