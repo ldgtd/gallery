@@ -1,6 +1,5 @@
 class AdminController < ApplicationController
 	before_filter :authentication_required
-	layout 'admin'
 
 	def index
     @image_stores = ImageStore.all
@@ -49,11 +48,16 @@ class AdminController < ApplicationController
     @image_store = ImageStore.find(params[:id])
 
     respond_to do |format|
-      if @image_store.update_attributes(params[:image_store])
-        format.html { redirect_to admins_url }
+      if @image_store.update_attributes(:name => params[:image_store][:name], :description => params[:image_store][:description])
+        @image = Image.new(:image => params[:image_store][:image], :image_store_id => @image_store.id)
+        if @image.save
+          format.html { redirect_to admins_url }
+        else
+          format.html { render action: "edit" }
+        end
       else
         format.html { render action: "edit" }
-      end
+      end 
     end
   end
 

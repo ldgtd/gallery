@@ -1,7 +1,7 @@
 <div class="span9 gallery_admin">
   <% @image_stores.each do |store| %>
     <%= div_for(store, :class => "gallery") do %>
-      <table border="1">
+      <table border="0">
         <tr>
           <td id="store_name"><h1><%= store.name  %></h1></td>
           <td><p id="datetime"><%= time_tag store.created_at, :format => '%d.%m.%y' %></p></td>
@@ -11,10 +11,11 @@
         </tr>
         <tr>
           <td colspan="2">
-          <ul class="thumbnails row">     
+          <ul class="thumbnails row">    
+            <% images = store.images %> 
             <% 1.upto(3) do |index| %>      
               <li class="thumbnail span3">
-                   
+                <%= image_tag images[index-1].image if !images[index-1].nil? %>  
               </li>     
             <% end %>      
           </ul>
@@ -25,7 +26,7 @@
         <tr>
           <td>
             <%= link_to 'Edit', {:controller => "admin", :action => "edit", :id => store.id}, :class => 'btn btn-info' %>
-             <%= link_to 'Destroy', {:controller => "admin", :method => :delete, :action => 'destroy', :id => store}, :class => 'btn btn-danger' %>
+            <%= link_to 'Destroy', {:controller => "admin", :method => :delete, :action => 'destroy', :id => store}, :class => 'btn btn-danger' %>
           </td>
         </tr>
       </table>

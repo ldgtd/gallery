@@ -151,6 +151,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.1.1)
+    rmagick (2.13.1)
     rspec (2.9.0)
       rspec-core (~> 2.9.0)
       rspec-expectations (~> 2.9.0)
@@ -235,6 +236,7 @@ DEPENDENCIES
   rb-fsevent
   rb-readline
   redcarpet
+  rmagick
   rspec-rails
   ruby-debug19
   ruby_gntp

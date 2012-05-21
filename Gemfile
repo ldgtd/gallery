@@ -16,6 +16,7 @@ group :assets do
   gem 'fancybox-rails'
   gem 'rails-i18n'
   gem 'carrierwave',     '>= 0.6.2'
+  gem 'rmagick'
 end
 
 # Production environment dependencies
