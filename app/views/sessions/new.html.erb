@@ -1,7 +1,7 @@
 <div class="login">
 	<div class="content">
 	<%= form_tag do %>
-			<table border="0">
+			<table border="0" class="table">
 				<tr>
 					<h2>Login</h2>
 				</tr>
@@ -9,7 +9,7 @@
 					<% if flash[:alert] %>
 						<div id="alerte" class="alert alert-error">
 							<a class="close" data-dismiss="alert" href="#">×</a>
-							<p class="field_with_errors"><%= flash[:alert] %></p>
+							<p class="field_with_errors"><%= 'Login unsuccessful' %></p>
 						</div>
 					<% end %>
 				</tr>

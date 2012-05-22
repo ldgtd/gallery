@@ -25,8 +25,8 @@
       <table border="0">
         <tr>
           <td>
-            <%= link_to 'Edit', {:controller => "admin", :action => "edit", :id => store.id}, :class => 'btn btn-info' %>
-            <%= link_to 'Destroy', {:controller => "admin", :method => :delete, :action => 'destroy', :id => store}, :class => 'btn btn-danger' %>
+            <%= link_to 'Edit', {:controller => 'admin', :action => 'edit', :id => store.id}, :class => 'btn btn-info' %>
+            <%= link_to 'Destroy', {:controller => 'admin', :action => 'show', :id => store.id}, :class => 'btn btn-danger' %>
           </td>
         </tr>
       </table>

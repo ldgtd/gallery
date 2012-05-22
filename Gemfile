@@ -17,6 +17,7 @@ group :assets do
   gem 'rails-i18n'
   gem 'carrierwave',     '>= 0.6.2'
   gem 'rmagick'
+  gem "zippy",           '~> 0.2.0'
 end
 
 # Production environment dependencies

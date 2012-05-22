@@ -2,23 +2,22 @@
   <div class="content">
   <%= form_for @image_store, :url => (@image_store.new_record? ? admins_path : admin_path(@image_store.id)), :html => {:multipart => true} do |f| %>
     <div>
-    	<%= f.label :name %><br />
-    	<%= f.text_field :name %>
+    	<%= f.label :name %><%= f.text_field :name %>
     </div>
     <div>
-    	<%= f.label :description %><br />
-    	<%= f.text_field :description %>
+    	<%= f.label :description %><%= f.text_field :description %>
     </div>
     <div>
-      <%= f.label :image  %><br /> 
-      <%= f.file_field :image %>  
+      <%= f.label :image  %><%= f.file_field :image %>  
     </div>
      <div>
-      <%= f.label :imageZIP  %><br /> 
-      <%= f.file_field :image %>  
+      <%= f.label :imageZIP %><%= f.file_field :image %>  
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Done", :class => 'btn btn-inverse' %>
+    </div>
+    <div class="back">
+      <%= link_to 'back', :controller => "admin", :action => "index" %>
     </div>
   <% end %>
   <div>

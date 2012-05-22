@@ -19,6 +19,7 @@ Gallery::Application.routes.draw do
   # controller :galleries do
   # 	get 'galleries'     => :index
   # 	get 'galleries/:id' => :show
+  #   post 'galleries/:id' => :destroy
   # end
 
   resources :admins, controller: 'admin', path: 'admin'

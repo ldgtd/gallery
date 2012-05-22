@@ -1,19 +1,34 @@
-<div class="span9 gallery_show">
-  <div class="gallery">
-    <table border="0">
-      <tr>
-        <td id="store_name"><h1><%= @image_store.name %></h1></td>
-        <td><p id="datetime"><%= time_tag @image_store.created_at, :format => '%d.%m.%y'  %></p></td>
-      </tr>
-      <tr>
-        <td><%= @image_store.description %></td>
-      </tr>
-    </table>
-    <table border="0">
+<div class="span9 gallery_admin show">
+  <% store = @image_store %>
+    <%= div_for(store, :class => "gallery") do %>
+      <table border="0">
         <tr>
-          <td id="empty_col"></td>
-          <td><div><%= link_to 'back', :controller => "galleries", :action => "index"%></div></td>
+          <td id="store_name"><h1><%= store.name  %></h1></td>
+          <td><p id="datetime"><%= time_tag store.created_at, :format => '%d.%m.%y' %></p></td>
+        </tr>
+        <tr>
+          <td><%= store.description %></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+          <ul class="thumbnails row">    
+            <% images = store.images %> 
+            <% 1.upto(21) do |index| %>      
+              <li class="thumbnail span3">
+                <a href="<%= images[index-1].image if !images[index-1].nil? %>" rel="" title="">   
+                <%= image_tag images[index-1].image if !images[index-1].nil? %>  
+                </a>
+              </li>     
+            <% end %>      
+          </ul>
+          </td>
         </tr>
       </table>
-  </div>
+           <table border="0">
+        <tr>
+          <td id="empty_col"></td>
+          <td><div><%= link_to 'back', {:controller => 'galleries', :action => 'index'} %></div></td>
+        </tr>
+      </table>  
+    <% end %>
 </div>

@@ -14,7 +14,6 @@ class AdminController < ApplicationController
   def new
     @image_store = ImageStore.new
 
-
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -33,7 +32,7 @@ class AdminController < ApplicationController
     respond_to do |format|
       if @image_store.save
         @image = Image.new(:image => params[:image_store][:image], :image_store_id => @image_store.id)
-        if @image.save
+        if @image.save 
           format.html { redirect_to admins_url }
         else
           format.html { render action: "new" }
@@ -60,9 +59,9 @@ class AdminController < ApplicationController
       end 
     end
   end
-
+  
   # DELETE 
-  def destroy
+  def show
     @image_store = ImageStore.find(params[:id])
     @image_store.destroy
 
@@ -70,4 +69,5 @@ class AdminController < ApplicationController
       format.html { redirect_to admins_url }
     end
   end
+
 end
