@@ -16,7 +16,7 @@
             <% 1.upto(3) do |index| %>      
               <li class="thumbnail span3">
                 <%= image_tag images[index-1].image if !images[index-1].nil? %>  
-              </li>     
+              </li>      
             <% end %>      
           </ul>
           </td>
@@ -26,7 +26,7 @@
         <tr>
           <td>
             <%= link_to 'Edit', {:controller => 'admin', :action => 'edit', :id => store.id}, :class => 'btn btn-info' %>
-            <%= link_to 'Destroy', {:controller => 'admin', :action => 'show', :id => store.id}, :class => 'btn btn-danger' %>
+            <%= link_to 'Destroy', admin_path(store), :method => 'delete', :confirm => 'Are you sure ?', :class => 'btn btn-danger' %>
           </td>
         </tr>
       </table>

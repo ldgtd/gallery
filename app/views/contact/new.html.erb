@@ -1,0 +1,29 @@
+<div class="span9 gallery_div">
+<%= form_for @message, :url => contact_path do |f| %>
+    <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %></h2>
+      <ul>
+      <% @message.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content, :rows => 6 %>
+  </div>
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
