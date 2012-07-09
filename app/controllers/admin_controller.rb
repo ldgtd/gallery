@@ -19,27 +19,6 @@ class AdminController < ApplicationController
     end
   end
 
-  def update
-    @errors    = {}
-    images     = {}
-
-    # process image ZIP file
-    if params[:imageZIP]
-      Zip::ZipFile.foreach(params[:imageZIP].path) do |image|
-        # accept only jpg and png files
-        if image.name =~ /(\w+_\d+(_\d+)?).(jpe?g|png)$/i
-          image_name = $1.upcase
-          image_ext  = $3.downcase
-
-          # Create temporary file with image
-          images[image_name] = Tempfile.new([image_name, ".#{image_ext}"])
-          images[image_name].set_encoding(Encoding::BINARY)
-          images[image_name].write(image.get_input_stream.read)
-        end
-      end
-    end
-  end
-
   # GET 
   def edit
     @image_store = ImageStore.find(params[:id])

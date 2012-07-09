@@ -1,7 +1,5 @@
 class ContactController < ApplicationController
 
-before_filter :authentication_required
-
 	def new
 	  @message = Message.new
 	end
