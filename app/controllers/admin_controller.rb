@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
 	before_filter :authentication_required
+  require 'archive/zip'
 
 	def index
     @image_stores = ImageStore.all
@@ -67,6 +68,23 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to admins_url }
+    end
+  end
+
+  def update_zip
+    @images_zip = Archive::Zip.extract('gallery.zip', 'public')
+    @images_store_zip = ImageStore.new(:name => params[:image_store][:name], :description => params[:image_store][:description])
+   
+    respond_to do |format|
+      if @images_store_zip.save
+        @images_zip  = Image.new(:imageZIP => params[:image_store][:image], :image_store_id => @image_store.id)
+        if @images_zip.save 
+          format.html { redirect_to admins_url }
+        else
+          format.html { render action: "new" }
+        end
+        format.html { render action: "new" }
+      end
     end
   end
 

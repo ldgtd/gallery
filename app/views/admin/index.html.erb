@@ -11,13 +11,9 @@
         </tr>
         <tr>
           <td colspan="2">
-          <ul class="thumbnails row">    
-            <% images = store.images %> 
-            <% 1.upto(3) do |index| %>      
-              <li class="thumbnail span3">
-                <%= image_tag images[index-1].image if !images[index-1].nil? %>  
-              </li>      
-            <% end %>      
+          <ul class="thumbnails row">        
+            <li class="thumbnail span3">
+            </li>         
           </ul>
           </td>
         </tr>
