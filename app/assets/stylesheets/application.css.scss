@@ -63,7 +63,7 @@ h1 {
 .login {
   margin: 0 auto;
   margin-top: 100px;
-  width: 320px;
+  width: 280px;
   height: 280px;
   background-color: #FFFFFF;
   @include box-shadow(rgba(0, 0, 0, 0.6) 0px 2px 5px);
@@ -71,21 +71,8 @@ h1 {
 
   .content {
     margin: 0 auto;
-    padding: 30px; 
-
-    .table {
-      width: 250px;
+    padding: 30px;
     }
-  }
-}
-
-#alerte {
-  height: 15px;
-  background-color: #C43C35;
-}
-.field_with_errors {
-  padding-bottom: 8px;
-  color: #FFFFFF;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
