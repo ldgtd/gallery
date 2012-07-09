@@ -18,6 +18,7 @@ group :assets do
   gem 'carrierwave',     '>= 0.6.2'
   gem 'rmagick'
   gem 'zip', :require => false
+  gem 'archive-zip'
 end
 
 # Production environment dependencies
