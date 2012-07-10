@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="top_line"></div>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+          <%= link_to "Manon's galleries", galleries_path, :class => 'brand' %>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <% ImageStore.all.each do |image_store| %>
+                  <li>
+                    <%= link_to image_store.name, gallery_path(image_store) %>
+                  </li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="footer">
+    <div id="content_footer">© 2012<a href="http://www.liquid-concept.ch"> Liquid Concept</a> - Ludovic Turmel - All rights reserved</div>
+  </div>
+</body>
+</html>

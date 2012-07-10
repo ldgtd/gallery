@@ -19,6 +19,7 @@ group :assets do
   gem 'rmagick'
   gem 'zip', :require => false
   gem 'archive-zip'
+  gem 'zippy',          '~> 0.2.1'
 end
 
 # Production environment dependencies

@@ -179,6 +179,7 @@ GEM
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
     ruby_gntp (0.3.4)
+    rubyzip (0.9.9)
     sass (3.1.15)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -211,6 +212,8 @@ GEM
     unicode-display_width (0.1.1)
     yard (0.7.5)
     zip (2.0.2)
+    zippy (0.2.1)
+      rubyzip (>= 0.9.1)
 
 PLATFORMS
   ruby
@@ -254,3 +257,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   yard (~> 0.7.5)
   zip
+  zippy (~> 0.2.1)

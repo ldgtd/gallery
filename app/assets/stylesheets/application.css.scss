@@ -88,7 +88,6 @@ h1 {
 
 .list_menu {
   width: 200px;
-  position: fixed;
   top: 12.5%;
   background-color: #FFFFFF;
   padding: 10px;
@@ -113,7 +112,7 @@ h1 {
 
 .content_admin {
   background-color: #FFFFFF;
-  margin: 0px 0px 0px 250px;
+  margin: 46px 0px 0px 20px;
   @include box-shadow(rgba(0, 0, 0, 0.2) 0px 2px 3px);
   @include border-radius(2px, 2px);
   

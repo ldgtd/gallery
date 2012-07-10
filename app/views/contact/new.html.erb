@@ -1,4 +1,4 @@
-<div class="span8 gallery gallery_div">
+<div class="span12 gallery gallery_div">
   <div class="form">
   <h1>Contacter moi</h1> <hr /><br/>
   <%= form_for @message, :url => contact_path do |f| %>
@@ -11,7 +11,7 @@
         <% end %>
         </ul>
       </div>
-    <% end %>
+    <% end %><br />
     <div class="field">
       <%= f.label "Nom & Prénom" %>
       <%= f.text_field :name %>
