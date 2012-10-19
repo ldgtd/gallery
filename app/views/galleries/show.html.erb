@@ -13,10 +13,10 @@
           <td colspan="2">
           <ul class="thumbnails row">    
             <% images = store.images %> 
-            <% 1.upto(21) do |index| %>      
+              <% images.each do |index| %>  
               <li class="thumbnail span3">
-                <a href="<%= images[index-1].image if !images[index-1].nil? %>" rel="" title="">   
-                <%= image_tag images[index-1].image if !images[index-1].nil? %>  
+                <a href="<%= index.image if !index.nil?%>" rel='gallery'>   
+                <%= image_tag index.image if !index.nil? %>  
                 </a>
               </li>     
             <% end %>      
@@ -24,10 +24,10 @@
           </td>
         </tr>
       </table>
-           <table border="0">
+      <table border="0">
         <tr>
           <td id="empty_col"></td>
-          <td><div><%= link_to 'back', {:controller => 'galleries', :action => 'index'} %></div></td>
+          <td><div><%= link_to 'retour', {:controller => 'galleries', :action => 'index'} %></div></td>
         </tr>
       </table>  
     <% end %>

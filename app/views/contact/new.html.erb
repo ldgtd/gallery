@@ -1,19 +1,19 @@
 <div class="span12 gallery gallery_div">
   <div class="form">
-  <h1>Contacter moi</h1> <hr /><br/>
+  <h1>Contacter moi</h1><hr />
   <%= form_for @message, :url => contact_path do |f| %>
       <% if @message.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@message.errors.count, "error") %></h2>
+        <h3>Erreur dans le formulaire</h3>
         <ul>
         <% @message.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
         </ul>
       </div>
-    <% end %><br />
+    <% end %>
     <div class="field">
-      <%= f.label "Nom & Prénom" %>
+      <%= f.label "Prénom" %>
       <%= f.text_field :name %>
     </div>
     <div class="field">

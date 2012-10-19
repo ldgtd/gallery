@@ -1,0 +1,9 @@
+fr:
+  activerecord:
+    models:
+      message: message 
+    attributes:
+      message:
+        name:  'prénom'
+        email: 'email'
+        content: 'message'

@@ -9,7 +9,7 @@ layout 'contact'
 	  @message = Message.new(params[:message])
 	  
 	  if @message.valid?
-	   	ContactMailer.contact_message(@message).deliver
+	   	UserMailer.contact_message(@message).deliver
 	    flash[:notice] = "Message sent! Thank you for contacting me."
 	    redirect_to root_url
 	  else

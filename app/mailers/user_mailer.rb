@@ -1,4 +1,4 @@
-class ContactMailer < ActionMailer::Base
+class UserMailer < ActionMailer::Base
 	
 	def contact_message(message)
   	@message = message

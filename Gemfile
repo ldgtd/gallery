@@ -17,8 +17,6 @@ group :assets do
   gem 'rails-i18n'
   gem 'carrierwave',     '>= 0.6.2'
   gem 'rmagick'
-  gem 'zip', :require => false
-  gem 'archive-zip'
   gem 'zippy',          '~> 0.2.1'
 end
 

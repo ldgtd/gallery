@@ -15,9 +15,7 @@
             <% images = store.images %> 
             <% 1.upto(6) do |index| %>      
               <li class="thumbnail span3">
-                <a href="<%= images[index-1].image if !images[index-1].nil? %>" rel="" title="">   
-                  <%= image_tag images[index-1].image if !images[index-1].nil? %>  
-                </a>
+                <%= image_tag images[index-1].image if !images[index-1].nil? %>  
               </li>     
             <% end %>      
           </ul>

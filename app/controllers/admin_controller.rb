@@ -26,25 +26,24 @@ class AdminController < ApplicationController
 
   # POST 
   def create
-    # image_params = params[:image_store].strip
     @image_store = ImageStore.new(:name => params[:image_store][:name], :description => params[:image_store][:description])
     
-    @images_tab = []
-    @image_zip = params[:image_store][:image]
-    Zippy.open('gallery.zip') do |zip|
-        zip.each do |file|
-        @images_tab << @image_zip
+    Zippy.each(params[:image_store][:image].path) do |filename, data|
+      if data.present? && File.basename(filename) !~ /^\./
+        file = CarrierWave::SanitizedFile.new({
+          :tempfile => StringIO.new(data),
+          :filename => filename,
+          :content_type => content_type_of_filename(filename)
+        })
+        image = @image_store.images.build(:title => File.basename(filename))
+        image.image = file
       end
     end
 
     respond_to do |format|
-      if @image_store.save
-        @image = Image.new(:image => @images_tab, :image_store_id => @image_store.id)
-        if @image.save 
+      if @image_store.save!
           format.html { redirect_to admins_url }
-        else
-          format.html { render action: "new" }
-        end
+      else
         format.html { render action: "new" }
       end
     end
@@ -56,12 +55,7 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       if @image_store.update_attributes(:name => params[:image_store][:name], :description => params[:image_store][:description])
-        @image = Image.new(:image::Zip.extract('gallery.zip', 'public') => params[:image_store][:image], :image_store_id => @image_store.id)
-        if @image.save
-          format.html { redirect_to admins_url }
-        else
-          format.html { render action: "edit" }
-        end
+        format.html { redirect_to admins_url }
       else
         format.html { render action: "edit" }
       end 
@@ -75,6 +69,19 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to admins_url }
+    end
+  end
+
+  private
+
+  def content_type_of_filename(filename)
+    case File.extname(filename)
+    when 'jpg', 'jpeg'
+      'image/jpeg'
+    when 'png'
+      'image/png'
+    else
+      'application/octet-stream'
     end
   end
 end
