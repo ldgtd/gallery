@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Globals dependencies
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.3'
 gem 'migrant'
 
 
@@ -27,33 +27,15 @@ group :production do
 end
 
 # Development environment dependencies (also needed by test environement)
-group :development, :test do
+group :development do
   gem 'sqlite3'
-
-  # gem 'rspec-rails'
-  # gem 'spork', '~> 0.9.0'
-
-  # gem 'shoulda-matchers'
-  # gem 'factory_girl_rails'
-  # gem 'factory-girl-matchers', '>= 1.0.0.rc1'
-  # gem 'faker'
-
- # gem 'coffee-script'
- # gem 'jasminerice'
-
-  gem 'ruby-debug19', require: 'ruby-debug'
-  gem 'pry-rails'
-  gem 'pry-remote'
-  gem 'hirb-unicode'
-
-  gem 'simplecov',    require: false
-
-  gem 'redcarpet'
-  gem 'yard', '~> 0.7.5'
 end
 
-# Dependencies should be load only in development environment
-group :development do
+group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 # Guard dependencies
