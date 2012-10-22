@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Globals dependencies
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.2'
 gem 'migrant'
 
 
