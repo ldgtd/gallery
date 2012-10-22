@@ -21,20 +21,22 @@ group :assets do
 end
 
 # Production environment dependencies
-group :production, :staging do
+group :production do
+  gem 'activerecord-postgresql-adapter', :group => [:production]
+  gem 'pg',             '~> 0.14.0'
 end
 
 # Development environment dependencies (also needed by test environement)
 group :development, :test do
   gem 'sqlite3'
 
-  gem 'rspec-rails'
-  gem 'spork', '~> 0.9.0'
+  # gem 'rspec-rails'
+  # gem 'spork', '~> 0.9.0'
 
-  gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
-  gem 'factory-girl-matchers', '>= 1.0.0.rc1'
-  gem 'faker'
+  # gem 'shoulda-matchers'
+  # gem 'factory_girl_rails'
+  # gem 'factory-girl-matchers', '>= 1.0.0.rc1'
+  # gem 'faker'
 
  # gem 'coffee-script'
  # gem 'jasminerice'
