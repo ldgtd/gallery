@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   #recup des data du form pour le login et test validation
   def create
-  	if params[:name] == 'admin' && params[:password] == 'admin'
+  	if params[:name] == 'maoui' && params[:password] == 'f0T0$313'
   		session[:logged] = true
   		redirect_to admins_url
   	else
