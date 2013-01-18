@@ -22,8 +22,6 @@ GEM
       activesupport (= 3.2.2)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activerecord-postgresql-adapter (0.0.1)
-      pg
     activeresource (3.2.2)
       activemodel (= 3.2.2)
       activesupport (= 3.2.2)
@@ -112,7 +110,6 @@ GEM
     mime-types (1.18)
     multi_json (1.2.0)
     nokogiri (1.5.3)
-    pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -197,7 +194,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-postgresql-adapter
   bootstrap-sass (~> 2.0.1)
   capybara
   carrierwave (>= 0.6.2)
@@ -213,7 +209,6 @@ DEPENDENCIES
   guard-spork
   jquery-rails
   migrant
-  pg (~> 0.14.0)
   rails (= 3.2.2)
   rails-i18n
   rb-fsevent

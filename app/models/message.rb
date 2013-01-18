@@ -7,8 +7,9 @@ class Message
   
   attr_accessor :name, :email, :content
   
-  validates_presence_of :name, :content, :message => "Le champ prénom doit être rempli"
-  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i, :message => "Le champ email doit être rempli"
+  validates_presence_of :name, :message => "Le champ prénom doit être rempli"
+  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i, :message => "Le champ email n'est pas au bon format"
+  validates_presence_of :content, :message => "Le champ message doit être rempli"
   validates_length_of :content, :maximum => 500, :message => "Le champ message doit être rempli"
 
   def initialize(attributes = {})

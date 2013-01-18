@@ -21,9 +21,10 @@ group :assets do
 end
 
 # Production environment dependencies
-group :production do
-  gem 'activerecord-postgresql-adapter', :group => [:production]
-  gem 'pg',             '~> 0.14.0'
+group :production, :staging do
+  gem 'sqlite3'
+  # gem 'activerecord-postgresql-adapter', :group => [:production]
+  # gem 'pg',             '~> 0.14.0'
 end
 
 # Development environment dependencies (also needed by test environement)

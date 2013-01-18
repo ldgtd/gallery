@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(:version => 20120515123452) do
     t.text     "description"
     t.string   "title"
     t.datetime "shooted_at"
+    t.integer  "image_store_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.integer  "image_store_id"
     t.string   "image"
   end
 
