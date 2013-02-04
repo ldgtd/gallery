@@ -7,7 +7,7 @@
           <td><p id="datetime"><%= time_tag store.created_at, :format => '%d.%m.%y' %></p></td>
         </tr>
         <tr>
-          <td><%= store.description %></td>
+          <td id="desc"><%= store.description %></td>
         </tr>
         <tr>
           <td colspan="2">
@@ -27,7 +27,7 @@
       <table border="0">
         <tr>
           <td id="empty_col"></td>
-          <td><div><%= link_to 'retour', {:controller => 'galleries', :action => 'index'} %></div></td>
+          <td><div class="retour"><%= link_to 'retour', {:controller => 'galleries', :action => 'index'} %></div></td>
         </tr>
       </table>  
     <% end %>

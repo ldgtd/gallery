@@ -1,6 +1,5 @@
 @import 'bootstrap';
 @import 'fancybox';
-/* @import 'galleries'; */
 @import "compass/css3";
 
 
@@ -20,6 +19,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.error {
+  color: #FF4400;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -57,6 +60,10 @@ h1 {
 
    h2{
      color: $blue;
+
+     .hashtag {
+      font-size: 0.7em; 
+     }
    }
  }
 
@@ -161,7 +168,8 @@ h1 {
   @include border-radius(4px, 4px);
 
   #store_name {
-    width: 550px; 
+    width: 550px;
+    padding-left: 25px; 
   }
 
   .title_link {
@@ -173,6 +181,11 @@ h1 {
     font-size: 12px;
     font-style: italic;
     text-align: right;
+    padding-right: 25px;
+  }
+
+  #desc {
+    padding-left: 25px;
   }
 
   #empty_col {
@@ -181,6 +194,10 @@ h1 {
 
   rows {
     width: 700px;
+  }
+
+  .retour, .more {
+    padding-right: 25px;
   }
 
   .thumbnails {
@@ -206,9 +223,52 @@ h1 {
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 .form {
-  width: 220px;
+  width: 440px;
   margin: 0 auto;
 
+  .field_label {
+    width: 440px;
+
+    .label_name {
+      float: left;
+    }
+
+    .label_email {
+      float: right;
+      margin-right: 175px;
+    }
+  }
+
+  .field {
+    width: 440px;
+
+    input {
+      width: 200px;
+    }
+
+    .field_name {
+      margin-right: 20px;
+      float: left;
+    }
+
+    .field_email {
+      float: right;
+    }
+  }
+
+  .field_message {
+    margin-top:20px;
+
+    .message {
+      width: 430px;
+    }
+  }
+
+  .field_with_errors {
+    input, textarea {
+      border-color: #FF4400;
+    }
+  }
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -227,7 +287,7 @@ h1 {
 
 #content_footer {
   height: 40px;
-  width: 370px;
+  width: 265px;
   margin: 0 auto;
   margin-top: 30px;
   color: #989898; 
@@ -237,4 +297,3 @@ h1 {
     text-decoration: none;
   }
 }
-

@@ -7,7 +7,7 @@
           <td><p id="datetime"><%= time_tag store.created_at, :format => '%d.%m.%y' %></p></td>
         </tr>
         <tr>
-          <td><%= store.description %></td>
+          <td id="desc"><%= store.description %></td>
         </tr>
         <tr>
           <td colspan="2">
@@ -15,7 +15,9 @@
             <% images = store.images %> 
             <% 1.upto(6) do |index| %>      
               <li class="thumbnail span3">
-                <%= image_tag images[index-1].image if !images[index-1].nil? %>  
+                <a href="<%= images[index-1].image if !images[index-1].nil? %>" rel='gallery'>
+                <%= image_tag images[index-1].image if !images[index-1].nil? %>
+                </a>  
               </li>     
             <% end %>      
           </ul>
@@ -25,7 +27,7 @@
       <table border="0">
         <tr>
           <td id="empty_col"></td>
-          <td><div><%= link_to 'plus..', :controller => "galleries", :action => "show", :id => store.id %></div></td>
+          <td><div class="more"><%= link_to 'plus...', :controller => "galleries", :action => "show", :id => store.id %></div></td>
         </tr>
       </table>
     <% end %>

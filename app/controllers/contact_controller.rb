@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 class ContactController < ApplicationController
 layout 'contact'
 
@@ -9,8 +11,7 @@ layout 'contact'
 	  @message = Message.new(params[:message])
 	  
 	  if @message.valid?
-	   	UserMailer.contact_message(@message).deliver
-	    flash[:notice] = "Message sent! Thank you for contacting me."
+	   	ContactMailer.contact_message(@message).deliver
 	    redirect_to root_url
 	  else
 	    render :action => 'new'
