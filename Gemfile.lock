@@ -109,7 +109,7 @@ GEM
       term-ansicolor
     mime-types (1.18)
     multi_json (1.2.0)
-    mysql (2.9.0)
+    mysql2 (0.3.11)
     nokogiri (1.5.3)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -210,7 +210,7 @@ DEPENDENCIES
   guard-spork
   jquery-rails
   migrant
-  mysql
+  mysql2
   rails (= 3.2.2)
   rails-i18n
   rb-fsevent

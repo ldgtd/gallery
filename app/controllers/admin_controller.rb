@@ -1,3 +1,5 @@
+require 'zippy'
+
 class AdminController < ApplicationController
 	before_filter :authentication_required
 
