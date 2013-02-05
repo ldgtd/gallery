@@ -7,7 +7,7 @@
           <td><p id="datetime"><%= time_tag store.created_at, :format => '%d.%m.%y' %></p></td>
         </tr>
         <tr>
-          <td><%= store.description %></td>
+          <td id="desc"><%= store.description %></td>
         </tr>
         <tr>
           <td colspan="2">
@@ -25,8 +25,8 @@
       <table border="0">
         <tr>
           <td>
-            <%= link_to 'Edit', {:controller => 'admin', :action => 'edit', :id => store.id}, :class => 'btn btn-info' %>
-            <%= link_to 'Destroy', admin_path(store), :method => 'delete', :confirm => 'Are you sure ?', :class => 'btn btn-danger' %>
+            <%= link_to 'Editer', {:controller => 'admin', :action => 'edit', :id => store.id}, :class => 'btn btn-info' %>
+            <%= link_to 'Supprimer', admin_path(store), :method => 'delete', :confirm => 'Are you sure ?', :class => 'btn btn-danger' %>
           </td>
         </tr>
       </table>

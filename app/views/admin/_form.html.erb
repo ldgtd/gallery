@@ -1,19 +1,17 @@
   <hr /><br/>
   <%= form_for @image_store, :url => (@image_store.new_record? ? admins_path : admin_path(@image_store.id)), :html => {:multipart => true} do |f| %>
     <div>
-    	<%= f.label :name %><%= f.text_field :name, :required => 'required' %>
+    	<%= f.label 'Nom de la gallerie' %><%= f.text_field :name, :required => 'required' %>
     </div>
     <div>
-    	<%= f.label :description %><%= f.text_field :description, :required => 'required'  %>
+    	<%= f.label :Description %><%= f.text_field :description, :required => 'required'  %>
     </div>
     <div>
-      <%= f.label 'Gallery ZIP'  %><%= f.file_field :image %>  
-    </div>
+      <%= f.label 'Fichier ZIP'  %><%= f.file_field :image %>  
+    </div><hr />
     <div class="actions">
-      <%= f.submit "Done", :class => 'btn btn-inverse' %>
-    </div>
-    <div class="back">
-      <%= link_to 'back', :controller => "admin", :action => "index" %>
+      <%= f.submit "Ajouter", :class => 'btn btn-success' %>
+      <%= link_to 'Retour', {:controller => "admin", :action => "index"}, :class => 'btn btn-inverse' %>
     </div>
   <% end %>
   <div>

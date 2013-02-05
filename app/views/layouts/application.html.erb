@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gallery</title>
+  <title>Manon galeries</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -16,11 +16,11 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </a>
-					<%= link_to "Manon's galleries", galleries_path, :class => 'brand' %>
+					<%= link_to "Manon galeries", galleries_path, :class => 'brand' %>
 	      <div class="nav-collapse">
 	        <ul class="nav">
 					  <li class="dropdown">
-					    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries<b class="caret"></b></a>
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galeries<b class="caret"></b></a>
 					    <ul class="dropdown-menu">
 								<% ImageStore.all.each do |image_store| %>
 					      	<li>
@@ -39,7 +39,7 @@
 			<%= yield %>
 			<div class="span3">
 				<div class="about_me"><h2><span class="hashtag">#</span> Moi</h2>
-					Passionnée de photographie depuis quelques années, j'aime capturer les petites moments de vie. Je vous invite à regarder mes différentes galleries. Si vous êtes à la recherche d'une photographe je vous invite à me <u><%= link_to 'contacter', contact_path  %></u>.
+					Passionnée de photographie depuis quelques années, j'aime capturer les petites moments de vie. Je vous invite à regarder mes différentes galeries. Si vous êtes à la recherche d'une photographe je vous invite à me <u><%= link_to 'contacter', contact_path  %></u>.
 				</div>
 			</div>
 		</div>
